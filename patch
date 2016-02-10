@@ -1,6 +1,6 @@
 25a26,30
 > iOS / MacOS Access
 > ====================
-> https://{$settings.smtp.host}/mail.mobileconfig.php?email={$mailbox->getUsername()}
+> https://{$settings.smtp.host}/indie.signed.mobileconfig
 > 
 > 
