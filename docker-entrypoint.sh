@@ -16,6 +16,7 @@ cp ${INSTALL_PATH}/public/.htaccess.dist ${INSTALL_PATH}/public/.htaccess
 
 sed -i "s/PASSWORD/${DB_ENV_MYSQL_PASSWORD}/g" ${INSTALL_PATH}/application/configs/application.ini
 sed -i "s/HOSTNAME/${HOSTNAME}/g" ${INSTALL_PATH}/application/configs/application.ini
+sed -i "s/CLOUD_HOSTNAME/${CLOUD_HOSTNAME}/g" ${INSTALL_PATH}/application/configs/application.ini
 sed -i "s/ADMIN_EMAIL/${ADMIN_EMAIL}/g" ${INSTALL_PATH}/application/configs/application.ini
 
 cat /salts >> ${INSTALL_PATH}/application/configs/application.ini
