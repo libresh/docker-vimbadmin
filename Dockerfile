@@ -12,16 +12,14 @@ RUN apt-get update \
       mysql-client \
       patch \
  && rm -rf /var/lib/apt/lists/* \
- && curl -fsL http://pecl.php.net/get/memcache-2.2.7.tgz >> /usr/src/php/ext/memcache.tgz \
- && tar -xf /usr/src/php/ext/memcache.tgz -C /usr/src/php/ext/ \
- && rm /usr/src/php/ext/memcache.tgz \
+ && pecl install memcache \
+ && docker-php-ext-enable memcache \
  && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
  && docker-php-ext-install \
       gd \
       zip \
       mysql \
       pdo_mysql \
-      memcache-2.2.7 \
       mcrypt \
       mbstring \
       json \
