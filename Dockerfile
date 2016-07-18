@@ -5,6 +5,7 @@ RUN apt-get update \
       bzip2 \
       sudo \
       git \
+      libfreetype6-dev \
       libpng12-dev \
       libjpeg-dev \
       libmemcached-dev \
@@ -14,7 +15,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* \
  && pecl install memcache \
  && docker-php-ext-enable memcache \
- && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+ && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr --with-freetype-dir=/usr \
  && docker-php-ext-install \
       gd \
       zip \
